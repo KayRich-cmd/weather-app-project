@@ -25,16 +25,18 @@ function formatDate(date) {
 }
 
 //  Display Current Day of the Week & Time
-let dateElement = document.querySelector("#date");
 let date = new Date();
+let dateElement = document.querySelector("#date");
 dateElement.innerHTML = formatDate(date);
 
 // Current Temp Display after a Standard Search
 function showWeather(response) {
-  let temperature = Math.round(response.data.main.temp);
   let cityName = response.data.name;
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `The current temp in ${cityName} is ${temperature}°C`;
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = `${cityName}`;
+  let temperature = Math.round(response.data.main.temp);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = `${temperature}°`;
 }
 
 // API Call for Weather after hitting Submit Button
