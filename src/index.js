@@ -1,4 +1,4 @@
-// Getting Current Date & Time
+// Getting Current Day of the Week & Time
 function formatDate(date) {
   let currentHours = date.getHours();
   if (currentHours < 10) {
@@ -10,16 +10,24 @@ function formatDate(date) {
   }
 
   let dayIndex = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let currentDay = days[dayIndex];
 
-  return `${currentDay} , ${currentHours}:${currentMinutes}`;
+  return `${currentDay} ${currentHours}:${currentMinutes}`;
 }
 
-// Where to Display Current Date & Time
+//  Display Current Day of the Week & Time
 let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
+let date = new Date();
+dateElement.innerHTML = formatDate(date);
 
 // Current Temp Display after a Standard Search
 function showWeather(response) {
@@ -29,7 +37,7 @@ function showWeather(response) {
   h2.innerHTML = `The current temp in ${cityName} is ${temperature}°C`;
 }
 
-// Searching for Weather after hitting Submit Button
+// API Call for Weather after hitting Submit Button
 function alertWeatherSearch(event) {
   debugger;
   event.preventDefault();
@@ -41,7 +49,7 @@ function alertWeatherSearch(event) {
   axios.get(apiUrl).then(showWeather);
 }
 
-// Search Form (Start Here)
+// Search Form Selector (Start Here)
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", alertWeatherSearch);
 
