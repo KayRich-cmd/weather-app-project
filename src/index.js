@@ -32,7 +32,9 @@ dateElement.innerHTML = formatDate(date);
 // Current Temp Display after a Standard Search
 function showWeather(response) {
   console.log(response);
-  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector(
+    "#city"
+  ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   let temperature = Math.round(response.data.main.temp);
   document.querySelector("#temperature").innerHTML = temperature;
   document.querySelector("#current-description").innerHTML =
