@@ -1,0 +1,58 @@
+body {
+  font-family: "Big Shoulders Stencil Display", cursive;
+}
+
+div.card-title {
+  text-align: right;
+  font-size: 18px;
+}
+
+form {
+  padding: 60px auto;
+  opacity: 0.5;
+}
+
+h2 {
+  padding: 20px;
+  text-align: center;
+  color: #0000ff;
+}
+
+.card {
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  margin: 50px 10px;
+  padding: 40px 40px;
+}
+
+.row.current-temp div {
+  text-align: center;
+  font-size: 100px;
+}
+
+.current-temp-pic {
+  font-size: 150px;
+}
+
+.weather-high {
+  font-weight: bold;
+}
+
+div.five-day-banner {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+div.col {
+  text-align: center;
+}
+
+div.icons {
+  font-size: 30px;
+  color: #fff;
+}
+
+div.description {
+  font-style: italic;
+  margin-top: 5px;
+}
