@@ -3,145 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Man App</title>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&display=swap" rel="stylesheet">
-
-    
-    
-    <script src="https://kit.fontawesome.com/ae9559fca3.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="src/styles2.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imprima&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ae9559fca3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Restarting App</title>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
-      
-        <div class="card">
-            <div class="card-title" id="city">
-                Weather Man
+      <div class="card card-one-style">
+        <div class="card-body">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="search"
+                  class="form-control form-input-style"
+                  placeholder="What's the weather in your city? (Enter City Name)"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-4">
+                <a class="btn btn-primary search" href="#" role="button"
+                  >Search</a
+                >
+                <a
+                  class="btn btn-primary search"
+                  href="#"
+                  role="button"
+                  id="current-location-link"
+                >
+                  <i class="fas fa-map-marker-alt"></i
+                ></a>
+              </div>
             </div>
-            
-            <div class="card-body">
-      
-                <div class="row">
-                    <div class="col-7">
-                        <form id="search-form">
-                            <input
-                                class="form-control form-control-lg"
-                                type="search"
-                                id = "city-input"
-                                placeholder="What's the current temperature in your city? (Enter City Name)"
-                                autofocus="on"
-                            />
-                    </div>
+          </form>
 
-                    <div class="col-5">
-                        <a class="btn btn-primary" href="#" role="button">Search</a>
-                        <a class="btn btn-primary" href="#" role="button" id="current-location-link">Current Location</a>
-                        <a class="btn btn-primary" href="#" role="button" id="fahrenheit-link">To F°</a>
-                        <a class="btn btn-primary" href="#" role="button" id="celsius-link">Back to C°</a>
-                    </div>
-                   </form>
-                </div>
+          <div>
+            <h1>Newark, NJ</h1>
+          </div>
+          <div id="date">Tuesday 2:00 AM</div>
+          <div id="current-description">Cloudy</div>
 
-                <div class="row">
-                    <div class="col-12">
-                        <h1 id="date">
-                            Current Date 
-                        </h1>
-                    </div>
-                </div>
-                
-                <div class="row current-temp">
-                    <div class="col-4">
-                        <h2>Current Temp Message</h2>
-                    </div>
-                    <div class="col-8 current-temp-pic">
-                        <i class="fas fa-cloud-moon"></i>
-                    </div>
-                </div>
+          <div class="row current-conditions">
+            <div class="col-6">
+              <span class="current-weather current-weather-icon"
+                ><i class="fas fa-cloud"></i
+              ></span>
 
-
-                <hr />
-    
-                <div class="five-day-banner">5-Day Forecast</div>
-
-                <div class="row weekdays">
-                    <div class="col">Mon</div>
-                    <div class="col">Tues</div>
-                    <div class="col">Wed</div>
-                    <div class="col">Thurs</div>
-                    <div class="col">Fri</div>
-                </div>
-    
-
-                <div class="row icons">
-                    <div class="col">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <div class="col">
-                        <i class="fas fa-cloud-sun"></i>
-                    </div>
-                    <div class="col">
-                        <i class="fas fa-cloud-sun"></i>
-                    </div>
-                    <div class="col">
-                        <i class="fas fa-cloud-sun"></i>
-                    </div>
-                    <div class="col">
-                        <i class="fas fa-cloud-sun"></i>
-                    </div>
-                </div>
-
-                <div class="row forecast">
-                    <div class="col">
-                        <span class="weather-high">
-                            52°
-                        </span>
-                        /36°</div>
-                    <div class="col">
-                        <span class="weather-high">
-                            49°
-                        </span>  
-                        /31°</div>
-                    <div class="col">
-                        <span class="weather-high">
-                            41°
-                        </span>
-                        /26°</div>
-                    <div class="col">
-                        <span class="weather-high">
-                            48°
-                        </span> 
-                        /38°</div>
-                    <div class="col">
-                        <span class="weather-high">
-                            60°
-                        </span>  
-                        /43°</div>
-                </div>
-
-                <div class="row description">
-                    <div class="col">Sunny</div>
-                    <div class="col">Partly Cloudy</div>
-                    <div class="col">Partly Cloudy</div>
-                    <div class="col">Partly Cloudy</div>
-                    <div class="col">Partly Cloudy</div>
-                </div>
-
+              <span class="current-weather" id="temperature"> 7°</span>
+              <span class="unit-type">
+                C | <a href="#" id="fahrenheit-link">F</a></span
+              >
             </div>
+            <div class="col-6">
+              <ul>
+                <li>
+                  <span class="other-description-label"> Humidity:</span> 65%
+                </li>
+                <li>
+                  <span class="other-description-label"> Wind Speed:</span> 10
+                  mph
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-two-style">
+        <div class="card-title five-day-banner">5-Day Forecast</div>
+        <div class="card-body">
+          <div class="row weekdays">
+            <div class="col">Mon</div>
+            <div class="col">Tues</div>
+            <div class="col">Wed</div>
+            <div class="col">Thurs</div>
+            <div class="col">Fri</div>
+          </div>
+
+          <div class="row icons">
+            <div class="col">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+          </div>
+
+          <div class="row forecast">
+            <div class="col">
+              <span class="forecast-weather-high"> 52°</span>
+              / 36°
+            </div>
+            <div class="col">
+              <span class="forecast-weather-high"> 49° </span>
+              / 31°
+            </div>
+            <div class="col">
+              <span class="forecast-weather-high"> 41° </span>
+              / 26°
+            </div>
+            <div class="col">
+              <span class="forecast-weather-high"> 48° </span>
+              / 38°
+            </div>
+            <div class="col">
+              <span class="forecast-weather-high"> 60° </span>
+              / 43°
+            </div>
+          </div>
+
+          <div class="row forecast-weather-description">
+            <div class="col">Sunny</div>
+            <div class="col">Partly Cloudy</div>
+            <div class="col">Partly Cloudy</div>
+            <div class="col">Partly Cloudy</div>
+            <div class="col">Partly Cloudy</div>
+          </div>
+        </div>
+      </div>
     </div>
-
-</div>
-
-<script src="src/index.js"></script>
-</body>
+    <script src="src/index.js"></script>
+  </body>
 </html>

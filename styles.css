@@ -1,58 +1,113 @@
 body {
-  font-family: "Big Shoulders Stencil Display", cursive;
+  font-family: "Imprima", sans-serif;
+  font-size: 20px;
+  background-image: url("/Users/apple/Desktop/SheCodes/SheCodes Plus/Restarting App/images/background2.jpg");
+  background-color: rgb(230, 80, 10);
+  color: #212121;
 }
 
-div.card-title {
-  text-align: right;
+div.card-one-style {
+  background: transparent;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  margin: 100px 130px 60px;
+  padding: 20px 30px;
+}
+
+div.card-two-style {
+  background: transparent;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  margin: 20px 130px;
+  padding: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+input.form-input-style {
+  border-radius: 50px;
+  margin-bottom: 15px;
   font-size: 18px;
+  opacity: 0.4;
 }
 
-form {
-  padding: 60px auto;
-  opacity: 0.5;
+h1 {
+  font-size: 44px;
 }
 
-h2 {
-  padding: 20px;
-  text-align: center;
-  color: #0000ff;
+div.current-conditions {
+  margin-top: 10px;
 }
 
-.card {
-  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
-  margin: 50px 10px;
-  padding: 40px 40px;
+span.current-weather {
+  font-size: 64px;
+  color: #ffc107;
 }
 
-.row.current-temp div {
-  text-align: center;
-  font-size: 100px;
+span.current-weather-icon {
+  color: #757575;
 }
 
-.current-temp-pic {
-  font-size: 150px;
+span.unit-type {
+  position: relative;
+  bottom: 30px;
+  left: 5px;
 }
 
-.weather-high {
+span.other-description-label {
+  font-weight: 600;
+}
+
+span.forecast-weather-high {
   font-weight: bold;
+  color: #ffc107;
+}
+
+ul {
+  list-style: none;
+}
+a.search {
+  background: #757575;
+  border: 1px solid #757575;
+  transition: all 200ms ease-in-out;
+}
+
+a.search:hover {
+  background: #ffffff;
+  border: 1px solid #757575;
+  color: #757575;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #757575;
+  transition: all 200ms ease-in-out;
+}
+
+a:hover {
+  color: #ffffff;
+  cursor: pointer;
 }
 
 div.five-day-banner {
-  text-align: center;
+  padding: 5px;
   font-size: 24px;
-  padding-bottom: 20px;
-}
-
-div.col {
-  text-align: center;
 }
 
 div.icons {
-  font-size: 30px;
-  color: #fff;
+  margin-bottom: 10px;
+  font-size: 44px;
+  color: #ff6600;
 }
 
-div.description {
-  font-style: italic;
-  margin-top: 5px;
+div.forecast {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+div.forecast-weather-description {
+  font-size: 14px;
+  font-weight: 700;
+  color: #cccccc;
 }
