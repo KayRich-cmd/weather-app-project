@@ -40,7 +40,7 @@ function showWeather(response) {
 }
 
 // API Call for Weather after hitting Submit Button
-function alertWeatherSearch(event) {
+function search(event) {
   debugger;
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -53,7 +53,7 @@ function alertWeatherSearch(event) {
 
 // Search Form Selector (Start Here)
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", alertWeatherSearch);
+searchForm.addEventListener("submit", search);
 
 // Weather for Current Location
 function showCurrentLocationWeather(response) {
