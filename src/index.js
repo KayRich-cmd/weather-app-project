@@ -31,15 +31,20 @@ dateElement.innerHTML = formatDate(date);
 
 // Current Temp Display after a Standard Search
 function showWeather(response) {
+  console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = `${temperature}°`;
+  document.querySelector("#temperature").innerHTML = temperature;
+  document.querySelector("#current-description").innerHTML =
+    response.data.weather[0].main;
+  document.querySelector(
+    "#humidity"
+  ).innerHTML = `${response.data.main.humidity}%`;
+  document.querySelector("#wind-speed").innerHTML = response.data.wind.speed;
 }
 
 // API Call for Weather after hitting Submit Button
 function search(event) {
-  debugger;
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
   let units = "metric";
