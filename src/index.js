@@ -31,9 +31,7 @@ dateElement.innerHTML = formatDate(date);
 
 // Current Temp Display after a Standard Search
 function showWeather(response) {
-  let cityName = response.data.name;
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = `${cityName}`;
+  document.querySelector("#city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = `${temperature}°`;
@@ -53,7 +51,9 @@ function search(event) {
 
 // Search Form Selector (Start Here)
 let searchForm = document.querySelector("#search-form");
+let searchButton = document.querySelector("#search-button");
 searchForm.addEventListener("submit", search);
+searchButton.addEventListener("click", search);
 
 // Weather for Current Location
 function showCurrentLocationWeather(response) {
@@ -79,8 +79,8 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showCurrentPosition);
 }
 
-let currentLocationLink = document.querySelector("#current-location-link");
-currentLocationLink.addEventListener("click", getCurrentPosition);
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentPosition);
 
 // Convert to F° button
 function convertToFahrenheit(event) {
