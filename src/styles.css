@@ -55,7 +55,8 @@ span.unit-type {
 }
 
 span.other-description-label {
-  font-weight: 600;
+  font-weight: 700;
+  color: #9900f1;
 }
 
 span.forecast-weather-high {
@@ -110,4 +111,9 @@ div.forecast-weather-description {
   font-size: 14px;
   font-weight: 700;
   color: #cccccc;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 20px;
 }
