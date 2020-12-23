@@ -46,6 +46,7 @@ span.current-weather {
 
 span.current-weather-icon {
   color: #757575;
+  margin-right: 10px;
 }
 
 span.unit-type {
