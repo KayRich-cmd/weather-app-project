@@ -35,22 +35,21 @@ h1 {
   font-size: 44px;
 }
 
-.current-weather-condition {
-  margin-bottom: 10px;
+div.current-conditions {
+  margin-top: 10px;
 }
 
-.weather-temperature img {
-  margin-right: 10px;
-  height: 64px;
-}
-
-.weather-temperature strong {
-  color: #ffc107;
+span.current-weather {
   font-size: 64px;
-  line-height: 1;
+  color: #ffc107;
 }
 
-.weather-temperature .units {
+span.current-weather-icon {
+  color: #757575;
+  margin-right: 10px;
+}
+
+span.unit-type {
   position: relative;
   bottom: 30px;
   left: 5px;
