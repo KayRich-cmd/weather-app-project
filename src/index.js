@@ -21,13 +21,13 @@ function formatDate(date) {
   ];
   let currentDay = days[dayIndex];
 
-  return `${currentDay} ${currentHours}:${currentMinutes}`;
+  return `${currentDay} at ${currentHours}:${currentMinutes}`;
 }
 
 //  Display Current Day of the Week & Time
 let date = new Date();
 let dateElement = document.querySelector("#date");
-dateElement.innerHTML = formatDate(date);
+dateElement.innerHTML = `Last Updated On: ${formatDate(date)}`;
 
 // Current Temp Display after a Standard Search
 function showWeather(response) {

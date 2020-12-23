@@ -26,17 +26,15 @@ div.card-two-style {
 
 input.form-input-style {
   border-radius: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   font-size: 18px;
   opacity: 0.4;
 }
 
 h1 {
   font-size: 44px;
-}
-
-div.current-conditions {
-  margin-top: 10px;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 span.current-weather {
@@ -68,6 +66,11 @@ span.forecast-weather-high {
 ul {
   list-style: none;
 }
+
+ul.overview {
+  padding-left: 0;
+}
+
 a.search {
   background: #757575;
   border: 1px solid #757575;
