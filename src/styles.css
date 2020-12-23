@@ -37,6 +37,10 @@ h1 {
   margin-bottom: 0;
 }
 
+div.current-conditions {
+  padding-left: 100px;
+}
+
 span.current-weather {
   font-size: 64px;
   color: #ffc107;
