@@ -41,6 +41,10 @@ div.current-conditions {
   padding-left: 100px;
 }
 
+small {
+  font-size: 16px;
+}
+
 span.current-weather {
   font-size: 64px;
   color: #ffc107;
@@ -73,6 +77,7 @@ ul {
 
 ul.overview {
   padding-left: 0;
+  padding-bottom: 20px;
 }
 
 a.search {
