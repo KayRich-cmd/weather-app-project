@@ -71,13 +71,17 @@ searchButton.addEventListener("click", search);
 
 // Weather for Current Location
 function showCurrentLocationWeather(response) {
-  console.log(response.data.name);
+  console.log(response.data);
   console.log(Math.round(response.data.main.temp));
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
+  let descriptionElement = document.querySelector("#current-description");
+  let humidityElement = document.querySelector("#humidity");
 
-  cityElement.innerHTML = response.data.name;
+  cityElement.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  descriptionElement.innerHTML = response.data.weather[0].main;
+  humidityElement.innerHTML = `${response.data.main.humidity}%`;
 }
 
 function showCurrentPosition(position) {
