@@ -34,20 +34,17 @@ function showWeather(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
-
-  let temperature = Math.round(response.data.main.temp);
-  document.querySelector("#temperature").innerHTML = temperature;
+  let descriptionElement = document.querySelector("#current-description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
 
   celsiusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
-  document.querySelector("#current-description").innerHTML =
-    response.data.weather[0].main;
-  document.querySelector(
-    "#humidity"
-  ).innerHTML = `${response.data.main.humidity}%`;
-  document.querySelector("#wind-speed").innerHTML = response.data.wind.speed;
+  descriptionElement.innerHTML = response.data.weather[0].main;
+  humidityElement.innerHTML = `${response.data.main.humidity}%`;
+  windSpeedElement.innerHTML = response.data.wind.speed;
 }
 
 // API Call for Weather after hitting Submit Button
