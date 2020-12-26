@@ -14,16 +14,6 @@ div.card-one-style {
   padding: 20px 30px;
 }
 
-div.card-two-style {
-  background: transparent;
-  border: 1px solid #bdbdbd;
-  border-radius: 10px;
-  margin: 20px 130px;
-  padding: 40px;
-  text-align: center;
-  color: #ffffff;
-}
-
 input.form-input-style {
   border-radius: 50px;
   margin-bottom: 40px;
@@ -106,28 +96,6 @@ a:hover {
 
 a.active {
   color: #212121;
-}
-
-div.five-day-banner {
-  padding: 5px;
-  font-size: 24px;
-}
-
-div.icons {
-  margin-bottom: 10px;
-  font-size: 44px;
-  color: #ff6600;
-}
-
-div.forecast {
-  margin-bottom: 10px;
-  font-size: 22px;
-}
-
-div.forecast-weather-description {
-  font-size: 14px;
-  font-weight: 700;
-  color: #cccccc;
 }
 
 footer {
