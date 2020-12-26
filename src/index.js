@@ -47,10 +47,6 @@ function showWeather(response) {
   windSpeedElement.innerHTML = response.data.wind.speed;
 }
 
-// Forecast Display
-
-function displayForecast(response) {}
-
 // API Call for Weather after hitting Submit Button
 function search(event) {
   event.preventDefault();
@@ -60,9 +56,6 @@ function search(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
 
   axios.get(apiUrl).then(showWeather);
-
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&appid=${apiKey}`;
-  axios.get(apiUrl).then(displayForecast);
 }
 
 // Search Form Selector (Start Here)
