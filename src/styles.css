@@ -104,6 +104,10 @@ a:hover {
   cursor: pointer;
 }
 
+a.active {
+  color: #212121;
+}
+
 div.five-day-banner {
   padding: 5px;
   font-size: 24px;
