@@ -73,10 +73,11 @@ searchButton.addEventListener("click", search);
 function showCurrentLocationWeather(response) {
   console.log(response.data.name);
   console.log(Math.round(response.data.main.temp));
-  let temperature = Math.round(response.data.main.temp);
-  let currentCityName = response.data.name;
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `The current temp in ${currentCityName} is ${temperature}°C`;
+  let cityElement = document.querySelector("#city");
+  let temperatureElement = document.querySelector("#temperature");
+
+  cityElement.innerHTML = response.data.name;
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
 }
 
 function showCurrentPosition(position) {
