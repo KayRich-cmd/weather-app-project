@@ -31,7 +31,6 @@ dateElement.innerHTML = `Last Updated On: ${formatDate(date)}`;
 
 // Current Temp Display after a Standard Search
 function showWeather(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#current-description");
@@ -71,17 +70,22 @@ searchButton.addEventListener("click", search);
 
 // Weather for Current Location
 function showCurrentLocationWeather(response) {
-  console.log(response.data);
-  console.log(Math.round(response.data.main.temp));
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#current-description");
   let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].main;
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
+  windSpeedElement.innerHTML = response.data.wind.speed;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showCurrentPosition(position) {
