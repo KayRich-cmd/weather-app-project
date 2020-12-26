@@ -32,12 +32,16 @@ dateElement.innerHTML = `Last Updated On: ${formatDate(date)}`;
 // Current Temp Display after a Standard Search
 function showWeather(response) {
   console.log(response.data);
-  document.querySelector(
-    "#city"
-  ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+
   let temperature = Math.round(response.data.main.temp);
   document.querySelector("#temperature").innerHTML = temperature;
 
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  cityElement.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#current-description").innerHTML =
     response.data.weather[0].main;
   document.querySelector(
@@ -94,10 +98,11 @@ currentLocationButton.addEventListener("click", getCurrentPosition);
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
+
   temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
 }
+
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
