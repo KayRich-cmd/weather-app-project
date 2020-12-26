@@ -46,6 +46,10 @@ function showWeather(response) {
   descriptionElement.innerHTML = response.data.weather[0].main;
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
   windSpeedElement.innerHTML = response.data.wind.speed;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 // API Call for Weather after hitting Submit Button
