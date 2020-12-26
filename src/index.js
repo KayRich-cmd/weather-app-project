@@ -108,9 +108,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 function convertBackToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusLink = document.querySelector("#celsius-link");
